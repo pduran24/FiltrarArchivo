@@ -1,0 +1,1 @@
+{Error(msg=ERROR: No se pudo conectar a la base de datos)=ERROR: No se pudo conectar a la base de datos, Error(msg=ERROR: Fallo en la autenticación)=ERROR: Fallo en la autenticación}

@@ -1,0 +1,5 @@
+INFO: El sistema inició correctamente
+ERROR: No se pudo conectar a la base de datos
+DEBUG: Variable x = 42
+ERROR: Fallo en la autenticación
+INFO: Proceso completado
