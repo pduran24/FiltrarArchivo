@@ -17,8 +17,11 @@ public class TxtWriterError {
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(nuevoArchivo))) {
 
-            bw.write(contenido.toString());
-            escrito = 1;
+            for (String line : contenido) {
+                bw.write(line);
+                bw.newLine();
+                escrito = 1;
+            }
 
         } catch (IOException e) {
             throw new RuntimeException(e);

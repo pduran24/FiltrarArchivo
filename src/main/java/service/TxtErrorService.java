@@ -3,16 +3,15 @@ package service;
 import models.Error;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TxtErrorService implements TxtService {
 
-
     @Override
-    public Map<Error, String> encontrarErrores(String archivo) {
+    public List<String> encontrarErrores(String archivo) {
 
-        var salida = new HashMap<Error, String>();
+        var salida = new ArrayList<String>();
 
 
         try(BufferedReader br = new BufferedReader(new FileReader(archivo))) {
@@ -23,7 +22,7 @@ public class TxtErrorService implements TxtService {
                 if (line.contains("ERROR")) {
                     Error error = new Error();
                     error.setMsg(line);
-                    salida.put(error, error.getMsg());
+                    salida.add(error.getMsg());
                 }
             });
         } catch (FileNotFoundException e) {
